@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BHARAT Fabricators</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
 </head>
@@ -13,13 +15,18 @@
 <body>
     <nav>
         <div class="logo">
-            <img src="img/logo.png" alt="logo">
+            <a href="index.htm">
+                <img src="img/logo.png" alt="logo">
+            </a>
         </div>
-        <div class="right">
-            <div class="nav-items">About</div>
-            <div class="nav-items">Product</div>
-            <div class="nav-items">Services</div>
-            <div class="nav-items">Contact</div>
+        <div class="bars">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="right hide">
+            <a href="about.htm" class="nav-items">About</a>
+            <a href="#products" class="nav-items">Product</a>
+            <a href="#products" class="nav-items">Services</a>
+            <a href="#contact" class="nav-items">Contact</a>
         </div>
     </nav>
 
@@ -27,20 +34,22 @@
 
     <div class="container">
         <div class="content">
-            <div class="label">
-                Since 1999
+            <div class="top">
+                <div class="label">
+                    Since 1999
+                </div>
+                <div class="h1">Welding Products that will help you <span>Steel the show <span class="border"></span>
+                    </span></div>
+                <div class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus ac donec turpis sed amet
+                    ut
+                    ac semper.
+                </div>
             </div>
-            <div class="h1">Welding Products that will help you <span>Steel the show <span class="border"></span>
-                </span></div>
-            <div class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus ac donec turpis sed amet ut
-                ac semper. </div>
+            <div class="img"><img src="img/img1.png" alt="img1"></div>
             <div class="contact">
                 <div class="tel"><i class="fas fa-phone-alt"></i> +91-9876543210</div>
                 <div class="mail">bfabricators@gmail.com</div>
             </div>
-        </div>
-        <div>
-            <img src="img/img1.png" alt="" srcset="">
         </div>
     </div>
 
@@ -76,7 +85,7 @@
         </div>
     </div>
 
-    <div class="gallery">
+    <div id="products" class="gallery">
         <div class="header">
             <div class="left">Services we provide</div>
             <div class="right">View all services <i class="fas fa-angle-right"></i></div>
@@ -142,66 +151,67 @@
                     Small Product description or you can put its pricing.
                 </div>
             </div>
-
         </div>
+    </div>
 
-        <div class="big-card">
-            <div class="card">
-                <div class="heading">Our Process End-to-End</div>
-                <div class="process">
+    <div class="big-card">
+        <div class="card">
+            <div class="heading">Our Process End-to-End</div>
+            <div class="process">
 
-                    <div class="block">
-                        <div class="circle">1</div>
-                        <div class="name">Step 1</div>
-                        <div class="desc">Small Product description or you can put its pricing.</div>
-                    </div>
+                <div class="block">
+                    <div class="circle">1</div>
+                    <div class="name">Step 1</div>
+                    <div class="desc">Small Product description or you can put its pricing.</div>
+                </div>
 
-                    <div class="block">
-                        <div class="circle">2</div>
-                        <div class="name">Step 2</div>
-                        <div class="desc">Small Product description or you can put its pricing.</div>
-                    </div>
+                <div class="block">
+                    <div class="circle">2</div>
+                    <div class="name">Step 2</div>
+                    <div class="desc">Small Product description or you can put its pricing.</div>
+                </div>
 
-                    <div class="block">
-                        <div class="circle">3</div>
-                        <div class="name">Step 3</div>
-                        <div class="desc">Small Product description or you can put its pricing.</div>
-                    </div>
+                <div class="block">
+                    <div class="circle">3</div>
+                    <div class="name">Step 3</div>
+                    <div class="desc">Small Product description or you can put its pricing.</div>
+                </div>
 
-                    <div class="block">
-                        <div class="circle last">4</div>
-                        <div class="name">Step 4</div>
-                        <div class="desc">Small Product description or you can put its pricing.</div>
-                    </div>
+                <div class="block">
+                    <div class="circle last">4</div>
+                    <div class="name">Step 4</div>
+                    <div class="desc">Small Product description or you can put its pricing.</div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="contact">
+    <div class="contact">
+        <div class="wrapper">
             <div class="heading">Company Location </div>
             <div class="map">
                 <img class="marker" src="/img/marker.png" alt="marker">
             </div>
+        </div>
+    </div>
 
-            <div class="address">
-                <img src="/img/logo_big.png" alt="logo">
-                
-                <div class="cards">
-                    <div class="card">
-                        <div class="header">Address</div>
-                        <div class="content">Micro Products Company 6523 N. Galena Rd., Peoria, IL 61614, USA</div>
-                    </div>
-                    <div class="card">
-                        <div class="header">Contact</div>
-                        <a><i class="fas fa-fw fa-phone-alt"></i> +91-9876543210</a>
-                        <a><i class="fas fa-fw fa-envelope"></i> bfabricators@gmail.com</a>
-                    </div>
-                    <div class="card">
-                        <div class="header">Links</div>
-                        <div><a href="">Privacy Policy</a></div>
-                        <div><a href="">Terms & Conditions</a></div>
-                    </div>
-                </div>
+    <div id="contact" class="address">
+        <img src="/img/logo_big.png" alt="logo">
+
+        <div class="cards">
+            <div class="card">
+                <div class="header">Address</div>
+                <div class="content">Micro Products Company<br> 6523 N. Galena Rd., Peoria, <br> IL 61614, USA</div>
+            </div>
+            <div class="card">
+                <div class="header">Contact</div>
+                <a href="tel:+919876543210"><i class="fas fa-fw fa-phone-alt"></i> +91-9876543210</a>
+                <a href="mailto:bfabricators@gmail.com"><i class="fas fa-fw fa-envelope"></i> bfabricators@gmail.com</a>
+            </div>
+            <div class="card">
+                <div class="header">Links</div>
+                <div><a href="">Privacy Policy</a></div>
+                <div><a href="">Terms & Conditions</a></div>
             </div>
         </div>
     </div>
@@ -209,6 +219,12 @@
     <footer>
         © 2021 Bharat Fabricators, All Rights Reserved | Site created by Saddweb
     </footer>
+
+    <script>
+        document.querySelector('.bars').addEventListener("click", ()=>{
+            document.querySelector('nav .right').classList.toggle('hide');
+        });
+    </script>
 </body>
 
 </html>

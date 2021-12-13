@@ -1,49 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-body::-webkit-scrollbar {
-    display: none;
-}
-
-nav {
-    display: grid;
-    max-width: 945px;
-    position: relative;
-    left: 248px;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-    place-items: center;
-    height: 120px;
-    font-size: 14px;
-}
-
-nav .logo {
-    padding-top: 12px;
-}
-
-nav .right {
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 35px;
-    cursor: pointer;
-}
-
-.shape1 {
-    width: 800px;
-    height: 950px;
-    position: absolute;
-    top: -457px;
-    left: -68px;
-    transform: rotateZ(-135deg);
-    border-top-left-radius: 130px;
-    background-image: linear-gradient(200deg, #BCF0F6, #EC4646);
-    z-index: -1;
+:root{
+    --max-width: 920px;
+    --white: #fff;
+    --tomato: #EC4646;
 }
 
 .container {
@@ -55,6 +13,7 @@ nav .right {
     grid-template-columns: auto auto;
     justify-content: space-between;
     overflow: hidden;
+    min-height: calc(100vh - 170px);
 }
 
 .container img {
@@ -65,9 +24,9 @@ nav .right {
     color: #000;
     display: grid;
     place-content: center;
-    background-color: white;
+    background-color: var(--white);
     font-weight: bold;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     position: relative;
     width: 110px;
     height: 40px;
@@ -80,7 +39,7 @@ nav .right {
     width: 0;
     height: 0;
     border-bottom: 20px solid transparent;
-    border-left: 10px solid white;
+    border-left: 10px solid var(--white);
 }
 
 .label::before {
@@ -91,20 +50,24 @@ nav .right {
     width: 0;
     height: 0;
     border-top: 20px solid transparent;
-    border-left: 10px solid white;
+    border-left: 10px solid var(--white);
 }
 
 .container .content {
     display: grid;
     place-content: center;
-    margin-bottom: 35px;
+    gap: 16px;
+}
+
+.container .content .top{
+    display: grid;
+    place-content: center;
 }
 
 .content .h1 {
     color: #000;
     font-size: 42px;
     font-weight: 700;
-    margin-bottom: 16px;
 }
 
 .content .h1 span {
@@ -117,28 +80,33 @@ nav .right {
     left: 0;
     height: 8px;
     width: 100%;
-    background-color: #EC4646;
+    background-color: var(--tomato);
     z-index: -1;
 }
 
 .content .p {
     font-size: 14px;
-    margin-bottom: 60px;
     width: 80%;
 }
 
 .content .contact {
+    width: 100%;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: max-content;
+    grid-auto-columns: max-content;
     column-gap: 24px;
-    font-size: 16px;
+    height: min-content;
+}
+
+.content .img{
+    grid-column: 2/3;
+    grid-row: 1/3;
 }
 
 .content .tel {
     padding: 16px 24px;
-    background-color: #EC4646;
-    color: #fff;
+    background-color: var(--tomato);
+    color: var(--white);
     border-radius: 4px;
 }
 
@@ -148,14 +116,14 @@ nav .right {
 
 .content .mail {
     padding: 16px 24px 16px 16px;
-    color: #EC4646;
+    color: var(--tomato);
     font-weight: bold;
 }
 
 .row {
     display: grid;
     grid-auto-flow: column;
-    height: 180px;
+    padding: 60px 0;
     background: rgba(49, 210, 228, 0.08);
     place-content: center;
     column-gap: 80px;
@@ -164,7 +132,7 @@ nav .right {
 
 .row .col {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 64px auto;
     column-gap: 24px;
     height: 64px;
     place-items: center;
@@ -179,12 +147,11 @@ nav .right {
 }
 
 .gallery {
-    max-width: 920px;
+    max-width:var(--max-width);
     margin: 0 auto;
 }
 
 .gallery .header {
-    height: 60px;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
@@ -196,13 +163,12 @@ nav .right {
 }
 
 .gallery .header .right {
-    color: #EC4646;
+    color: var(--tomato);
 }
 
 .gallery .images {
     display: grid;
     grid-template-columns: repeat(3, min-content);
-    grid-auto-rows: repeat(2, auto);
     justify-content: space-between;
     padding: 16px 0 32px 0;
     gap: 16px;
@@ -211,7 +177,8 @@ nav .right {
 
 .gallery .images .card {
     padding: 12px;
-    background-color: white;
+    padding-bottom: 32px;
+    background-color: var(--white);
     border: 1px solid #fafafa;
     border-radius: 8px;
     display: grid;
@@ -234,11 +201,11 @@ nav .right {
 .big-card {
     min-height: 100vh;
     display: grid;
-    place-content: center;
+    place-items: center;
 }
 
 .big-card .card {
-    width: 978px;
+    width: var(--max-width);
     height: 230px;
     border-radius: 16px;
     background-image: url("/img/Vector\ 1.png"), url("/img/Vector\ 2.png"), url("/img/BG.png");
@@ -262,6 +229,11 @@ nav .right {
     row-gap: 16px;
 }
 
+.process .block .name{
+    font-weight: bold;
+}
+
+
 .process .circle {
     position: relative;
     background-color: #BCF0F6;
@@ -278,7 +250,7 @@ nav .right {
     content: '';
     position: absolute;
     left: calc(100% + 16px);
-    width: 184px;
+    width: 500%;
     height: 0px;
     border: 1px dashed #BCF0F6;
 }
@@ -286,6 +258,11 @@ nav .right {
 
 .big-card .process .desc {
     color: #000;
+}
+
+.contact{
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 
 .contact .heading {
@@ -309,49 +286,179 @@ nav .right {
     left: 456px;
 }
 
-.contact .address {
-    border-top: 1px solid rgba(0, 0, 0, 0.16);
-    padding-top: 80px;
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 80px;
-    place-content: center;
-    margin-bottom: 120px;
+@media screen and (max-width: 600px) {
+    .container{
+        left: 0;
+        width: 100%;
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .container .content{
+        padding: 16px;
+    }
+
+    .container .contact{
+        grid-auto-flow: row;
+        gap: 16px;
+        padding: 0;
+    }
+    
+    .container .content .img{
+        grid-column: auto;
+        grid-row: auto;
+    } 
+
+    .container .content img {
+        width: 100%;
+    }
+
+    .row{
+        grid-auto-flow: row;
+        gap: 40px;
+    }
+
+    .row .col{
+        place-content: start;
+    }
+
+    .gallery{
+        padding: 16px;
+    }
+
+    .gallery .header .right{
+        display: none;
+    }
+
+    .gallery .images{
+        grid-template-columns: repeat(1, auto);
+        gap: 32px;
+    }
+
+    .gallery .images img{
+        width: 100%;
+    }
+
+    .big-card{
+        margin-bottom: 50px;
+    }
+
+    .big-card .card{
+        width: 82%;
+        padding: 50px 16px;
+        height: auto;
+    }
+
+    .big-card .card .heading{
+        font-size: 21px;
+        margin-bottom: 32px;
+    }
+
+    .process{
+        grid-template-columns: auto;
+        row-gap: 16px;
+    }
+
+    .process .block .circle::after{
+        content: none;
+    }
+
+    .process .block .desc {
+        width: 80%;
+    }
+
+    .contact{
+        padding: 0 16px;
+    }
+
+    .contact .heading{
+        font-size: 24px;
+    }
+
+    .contact .map {
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 70px;
+    }
+
+    .contact .marker {
+        display: none;
+    }
 }
 
-.contact .address .cards {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 40px;
-    place-content: center;
-}
+@media screen and (min-width:601px) and (max-width: 993px) {
+    :root{
+        --max-width:100%;
+    }
+    
+    .container {
+        left: 0;
+        width: 100%;
+    }
 
-.address .cards .card {
-    display: grid;
-    gap: 16px;
-}
+    .container .content{
+        padding: 16px;
+    }
 
-.address .card .header {
-    height: auto;
-    font-size: 24px;
-    color: black;
-}
+    .container .content .img {
+        grid-row: auto;
+        grid-column: auto;
+        margin: 0 auto;
+    }
 
-.address .cards .card a,
-.content {
-    color: rgba(0, 0, 0, 0.6);
-    text-decoration: none;
-    cursor: pointer;
-}
+    .container .content img {
+        margin: 0;
+    }
 
-.address .cards .card i {
-    margin-right: 8px;
-}
+    .row{
+        padding: 60px;
+        gap: 0;
+    }
 
-footer {
-    background-color: #EC4646;
-    color: white;
-    padding: 16px;
-    font-size: 12px;
-    text-align: center;
+    .gallery .header{
+        padding: 0 16px;
+    }
+
+    .gallery .images {
+        grid-template-columns: repeat(2 ,min-content);
+        padding: 16px 60px;
+    }
+
+    .big-card{
+        min-height: auto;
+        padding: 16px;
+    }
+
+    .big-card .card{
+        width: auto;
+    }
+
+    .process .circle:not(.last):after {
+        width: 350%;
+    }
+
+    .contact .heading{
+        padding: 16px;
+    }
+
+    .contact .map{
+        width: calc(100% - 32px);
+        margin: 0 auto;
+        margin-bottom: 60px;
+
+    }
+
+    .contact .map .marker{
+        display: none;
+    }
+
+    .address{
+        padding: 32px 16px;
+        gap: 20px;
+        margin-bottom: 0;
+    }
+
+    .address .cards{
+        gap: 20px;
+    }
 }

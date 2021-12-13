@@ -1,0 +1,61 @@
+.address {
+    max-width: 920px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.16);
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 80px;
+    place-content: center;
+    margin-bottom: 80px;
+    padding: 80px 16px 0 16px;
+}
+
+.address .cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 40px;
+    place-content: center;
+}
+
+.address .cards .card {
+    display: grid;
+    gap: 16px;
+}
+
+.address .card .header {
+    height: auto;
+    font-size: 24px;
+    color: black;
+}
+
+.address .cards .card a,
+.content {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.address .cards .card i {
+    margin-right: 8px;
+}
+
+footer {
+    background-color: #EC4646;
+    color: white;
+    padding: 16px;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media screen and (max-width:600px) {
+    .address{
+        width: calc(100% - 32px);
+        grid-template-columns: auto;
+        gap: 32px;
+    }
+
+    .address .cards{
+        grid-template-columns: auto;
+        gap: 32px;
+    }
+}
