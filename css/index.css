@@ -108,6 +108,12 @@
     background-color: var(--tomato);
     color: var(--white);
     border-radius: 4px;
+    transition: 0.75s ease;
+}
+
+.content .tel:hover {
+    background-image: linear-gradient(90deg, #bcf0f6, #ec4646);
+    color: #000;
 }
 
 .content .tel i {
@@ -118,6 +124,11 @@
     padding: 16px 24px 16px 16px;
     color: var(--tomato);
     font-weight: bold;
+    transition: 0.75s ease;
+}
+
+.content .mail:hover {
+    color: #000;
 }
 
 .row {

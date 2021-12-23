@@ -33,24 +33,26 @@ var content = document.querySelectorAll('.card .content');
 
 $('.slider-btn .next').click(function (e) {
     card[c].classList.remove('active');
+    card[c].classList.remove('w3-animate-top');
     content[c].classList.add('hide');
     c++;
     if (c == card.length) {
         c = 0;
     }
     card[c].classList.add('active');
+    card[c].classList.add('w3-animate-top');
     content[c].classList.remove('hide');
-    console.log(c);
 });
 
 $('.slider-btn .prev').click(function (e) {
     card[c].classList.remove('active');
+    card[c].classList.remove('w3-animate-top');
     content[c].classList.add('hide');
     if (c == 0) {
         c = card.length;
     }
     c--;
     card[c].classList.add('active');
+    card[c].classList.add('w3-animate-top');
     content[c].classList.remove('hide');
-    console.log(c);
 });
