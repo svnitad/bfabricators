@@ -275,15 +275,7 @@
     position: relative;
     width: 100%;
     height: 554px;
-    background-image: url("/img/map.png");
-    background-size: 100% 100%;
     margin-bottom: 120px;
-}
-
-.contact .map .marker {
-    position: absolute;
-    top: 294px;
-    left: 456px;
 }
 
 @media screen and (max-width: 600px) {
@@ -376,13 +368,7 @@
     }
 
     .contact .map {
-        background-size: cover;
-        background-position: center;
         margin-bottom: 70px;
-    }
-
-    .contact .marker {
-        display: none;
     }
 }
 
@@ -446,10 +432,6 @@
         margin: 0 auto;
         margin-bottom: 60px;
 
-    }
-
-    .contact .map .marker{
-        display: none;
     }
 
     .address{

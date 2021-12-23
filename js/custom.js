@@ -6,14 +6,51 @@ $("nav").html(`<div class="logo">
 <div class="bars">
     <i class="fas fa-bars"></i>
 </div>
-<div class="right hide">
+<div class="right hid">
     <a href="about.htm" class="nav-items">About</a>
     <a href="index.htm#products" class="nav-items">Product</a>
     <a href="services.htm" class="nav-items">Services</a>
     <a href="#contact" class="nav-items">Contact</a>
 </div>`);
 
+var isOpen = false;
 $(".bars").click(function () { 
+    $(".bars i").toggleClass("fa-bars fa-times");
     $('nav').toggleClass('bg-white');
-    $('nav .right').toggleClass('hide');
+    var a = $('nav .nav-items');
+    if (!isOpen) {
+        $('nav').css({ 'height': $('nav').height() + a.get(0).offsetHeight * a.length });
+        isOpen = true;
+    } else {
+        $('nav').height(93);
+        isOpen = false;
+    }
+});
+
+var c = 0;
+var card = document.querySelectorAll('.card-container .card');
+var content = document.querySelectorAll('.card .content');
+
+$('.slider-btn .next').click(function (e) {
+    card[c].classList.remove('active');
+    content[c].classList.add('hide');
+    c++;
+    if (c == card.length) {
+        c = 0;
+    }
+    card[c].classList.add('active');
+    content[c].classList.remove('hide');
+    console.log(c);
+});
+
+$('.slider-btn .prev').click(function (e) {
+    card[c].classList.remove('active');
+    content[c].classList.add('hide');
+    if (c == 0) {
+        c = card.length;
+    }
+    c--;
+    card[c].classList.add('active');
+    content[c].classList.remove('hide');
+    console.log(c);
 });
