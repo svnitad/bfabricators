@@ -289,6 +289,10 @@
     margin-bottom: 120px;
 }
 
+.sub_heading{
+    margin-top: 1rem;
+}
+
 @media screen and (max-width: 600px) {
     .container{
         left: 0;
@@ -455,3 +459,4 @@
         gap: 20px;
     }
 }
+
