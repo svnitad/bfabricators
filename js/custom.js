@@ -1,5 +1,5 @@
 $("nav").html(`<div class="logo">
-    <a href="index.htm">
+    <a href="/">
         <img src="img/logo.png" alt="logo">
     </a>
 </div>
