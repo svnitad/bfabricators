@@ -7,9 +7,9 @@ $("nav").html(`<div class="logo">
     <i class="fas fa-bars"></i>
 </div>
 <div class="right hid">
-    <a href="about.htm" class="nav-items">About</a>
-    <a href="index.htm#products" class="nav-items">Product</a>
-    <a href="services.htm" class="nav-items">Services</a>
+    <a href="about.html" class="nav-items">About</a>
+    <a href="/#products" class="nav-items">Product</a>
+    <a href="services.html" class="nav-items">Services</a>
     <a href="#contact" class="nav-items">Contact</a>
 </div>`);
 
