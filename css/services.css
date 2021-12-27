@@ -2,6 +2,11 @@
     --max-width: 920px;
 }
 
+.custom_img {
+    max-width: 80vw;
+    width: 80%;
+}
+
 .container {
     display: grid;
     place-items: center;
