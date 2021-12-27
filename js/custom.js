@@ -8,9 +8,9 @@ $("nav").html(`<div class="logo">
 </div>
 <div class="right hid">
     <a href="/" class="nav-items">Home</a>
-    <a href="about.html" class="nav-items">About</a>
+    <a href="/about" class="nav-items">About</a>
     <a href="#products" class="nav-items">Product</a>
-    <a href="services.html" class="nav-items">Services</a>
+    <a href="/services" class="nav-items">Services</a>
     <a href="#contact" class="nav-items">Contact</a>
 </div>`);
 
