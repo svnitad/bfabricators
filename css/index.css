@@ -4,6 +4,10 @@
     --tomato: #EC4646;
 }
 
+.display-none{
+    display: none;
+}
+
 .container {
     position: relative;
     left: 248px;
