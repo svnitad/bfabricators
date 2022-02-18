@@ -29,16 +29,27 @@ $(".bars").click(function () {
 });
 
 var c = 0;
-var card = document.querySelectorAll('.card-container .card');
-var content = document.querySelectorAll('.card .content');
+
+var card = document.querySelectorAll('.card-container .card1');
+var content = document.querySelectorAll('.card1 .content');
+var length = card.length-1;
 
 $('.slider-btn .next').click(function (e) {
     card[c].classList.remove('active');
     card[c].classList.remove('w3-animate-top');
     content[c].classList.add('hide');
     c++;
-    if (c == card.length) {
+    if (c == length+1) {
         c = 0;
+        for (let i = 0; i < 5; i++) {
+            card[i].classList.remove('hidden');
+            card[length-i].classList.add('hidden');
+        }
+    }
+    if(c >= 5)
+    {
+        card[c-5].classList.add('hidden');
+        card[c].classList.remove('hidden');
     }
     card[c].classList.add('active');
     card[c].classList.add('w3-animate-top');
@@ -49,11 +60,71 @@ $('.slider-btn .prev').click(function (e) {
     card[c].classList.remove('active');
     card[c].classList.remove('w3-animate-top');
     content[c].classList.add('hide');
-    if (c == 0) {
-        c = card.length;
-    }
+    
     c--;
+    if (c < 0) {
+        c = length;
+        for (let i = 0; i < 5; i++) {
+            card[i].classList.add('hidden');
+            card[length-i].classList.remove('hidden');
+        }
+    }
+    if(c < length - 4)
+    {
+        card[c+5].classList.add('hidden');
+        card[c].classList.remove('hidden');
+    }
     card[c].classList.add('active');
     card[c].classList.add('w3-animate-top');
     content[c].classList.remove('hide');
+});
+
+var d = 0;
+var card2 = document.querySelectorAll('.card-container2 .card2');
+var content1 = document.querySelectorAll('.card2 .content2');
+var length = card2.length-1;
+
+$('.slider-btn2 .next2').click(function (e) {
+    card2[d].classList.remove('active');
+    card2[d].classList.remove('w3-animate-top');
+    content1[d].classList.add('hide');
+    d++;
+    if (d == length+1) {
+        d = 0;
+        for (let i = 0; i < 5; i++) {
+            card2[i].classList.remove('hidden');
+            card2[length-i].classList.add('hidden');
+        }
+    }
+    if(d >= 5)
+    {
+        card2[d-5].classList.add('hidden');
+        card2[d].classList.remove('hidden');
+    }
+    card2[d].classList.add('active');
+    card2[d].classList.add('w3-animate-top');
+    content1[d].classList.remove('hide');
+});
+
+$('.slider-btn2 .prev2').click(function (e) {
+    card2[d].classList.remove('active');
+    card2[d].classList.remove('w3-animate-top');
+    content1[d].classList.add('hide');
+    
+    d--;
+    if (d < 0) {
+        d = length;
+        for (let i = 0; i < 5; i++) {
+            card2[i].classList.add('hidden');
+            card2[length-i].classList.remove('hidden');
+        }
+    }
+    if(d < length - 4)
+    {
+        card2[d+5].classList.add('hidden');
+        card2[d].classList.remove('hidden');
+    }
+    card2[d].classList.add('active');
+    card2[d].classList.add('w3-animate-top');
+    content1[d].classList.remove('hide');
 });
